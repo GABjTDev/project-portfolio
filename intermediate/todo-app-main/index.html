@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Frontend Mentor | Todo app</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg"></div>
+      <header class="header">
+        <div class="header__logo">
+          <h1>TODO</h1>
+          <img src="./images/icon-moon.svg" alt="moon" class="theme"/>
+        </div>
+        <form action="#">
+          <input type="text" placeholder="Create a new todo" required />
+        </form>
+      </header>
+
+      <main class="main">
+      </main>
+
+      <div class="options">
+        <button class="active all">All</button>
+        <button>Active</button>
+        <button>Completed</button>
+      </div>
+
+      <footer>
+        <p>Drag and drop to reoder list</p>
+      </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="main.js" type="module"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Gabriel Rea</a>.
+    </div>
+  </body>
+</html>

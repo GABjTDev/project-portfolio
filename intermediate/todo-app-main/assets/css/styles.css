@@ -1,0 +1,250 @@
+/* 'Josefin Sans' */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --font: "Josefin Sans", "Arial";
+
+  --brightBlue: hsl(220, 98%, 61%);
+
+  /* ### Light Theme */
+
+  --veryLightGray: hsl(0, 0%, 98%);
+  --veryLightGrayishBlue: hsl(236, 33%, 92%);
+  --lightGrayishBlue: hsl(233, 11%, 84%);
+  --darkGrayishBlue: hsl(236, 9%, 61%);
+  --veryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+  /* ### Dark Theme */
+
+  --veryDarkBlue: hsl(235, 21%, 11%);
+  --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --lightGrayishBlue: hsl(234, 39%, 85%);
+  --lightGrayishBlueHover: hsl(236, 33%, 92%); /*Hover*/
+  --darkGrayishBlue: hsl(234, 11%, 52%);
+  --veryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --veryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.bg {
+  background: url("../../images/bg-desktop-light.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  z-index: -1;
+}
+
+.header {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: white;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header__logo h1 {
+  letter-spacing: 5px;
+  font-size: 1.6rem;
+}
+
+.header__logo img {
+  width: 20px;
+  cursor: pointer;
+}
+
+form {
+  margin: 10px 0;
+}
+
+form input {
+  width: 100%;
+  padding: 18px 40px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+.main {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.main__list {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--veryLightGrayishBlue);
+  padding: 20px;
+  cursor: pointer;
+}
+
+.main__list.draggable{
+  transform: scale(1.02) rotate(-1deg);
+  box-shadow: 0 0 20px rgba(149, 153, 159, .16);
+}
+
+.main__list p {
+  flex-grow: 1;
+  font-size: 0.8rem;
+  color: var(--veryDarkGrayishBlue);
+  font-weight: 700;
+}
+
+.main__list img {
+  cursor: pointer;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid var(--veryLightGrayishBlue);
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle.complete {
+  background: url("../../images/icon-check.svg") no-repeat, linear-gradient(to bottom right,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+  background-position: center;
+}
+
+.main__list p.line-through {
+  text-decoration: line-through;
+  color: var(--darkGrayishBlue);
+}
+
+.main__count {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--lightGrayishBlue);
+}
+
+.main__count p{
+  font-size: .9rem;
+}
+
+.main__count button {
+  background: transparent;
+  border: none;
+  color: var(--lightGrayishBlue);
+  outline: none;
+  cursor: pointer;
+}
+
+.options {
+  width: 100%;
+  text-align: center;
+}
+
+.options button {
+  border: none;
+  outline: none;
+  margin: 0 10px;
+  color: var(--darkGrayishBlue);
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.options button.active {
+  color: var(--brightBlue);
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--darkGrayishBlue);
+  font-size: .9rem;
+}
+
+.dark{
+  background: var(--veryDarkBlue);
+}
+
+.dark .bg {
+  background: url("../../images/bg-desktop-dark.jpg") no-repeat;
+  background-size: cover;
+}
+
+.dark .main {
+  background-color: var(--veryDarkDesaturatedBlue);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark .main__list p,
+.dark input {
+  color: var(--lightGrayishBlue);
+}
+
+.dark .main__list {
+  border-bottom: 1px solid var(--darkGrayishBlue);
+}
+
+.dark input{
+  background-color: var(--veryDarkDesaturatedBlue);
+}
+
+.dark .main__list p.line-through {
+  color: var(--veryDarkGrayishBlue);
+}
+
+.remove-animation{
+  animation: remove .5s ease;
+}
+
+@keyframes remove{
+
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100%{
+    transform: translateY(300px) rotate(50deg);
+    opacity: 0;
+  }
+
+}
+
+@media screen and (min-width: 800px){
+  
+  .bg {
+    height: 300px;
+  }
+
+  .header {
+    padding-top: 100px;
+  }
+
+}
