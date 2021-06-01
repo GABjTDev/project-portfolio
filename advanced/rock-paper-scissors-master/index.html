@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="box-score">
+      <div class="weapon-list">
+        <ul>
+          <li>ROCK</li>
+          <li>PAPER</li>
+          <li>SCISSORS</li>
+          <li>LIZARD</li>
+          <li>SPOCK</li>
+        </ul>
+      </div>
+
+      <div class="score">
+        <p class="score-text">score</p>
+        <p class="score-number">0</p>
+      </div>
+    </div>
+
+    <div class="game">
+
+      <div class="circle rock" data-target="0">
+        <div class="box-white">
+          <img src="./images/icon-rock.svg" alt="rock">
+        </div>
+      </div>
+
+      <div class="circle paper" data-target="1">
+        <div class="box-white">
+          <img src="./images/icon-paper.svg" alt="paper">
+        </div>
+        
+      </div>
+
+      <div class="circle scissors" data-target="2">
+        <div class="box-white">
+          <img src="./images/icon-scissors.svg" alt="scissors">
+        </div>  
+      </div>
+
+      <div class="circle lizard" data-target="3">
+        <div class="box-white">
+          <img src="./images/icon-lizard.svg" alt="lizard">
+        </div>
+      </div>
+
+      <div class="circle spock" data-target="4">
+        <div class="box-white">
+          <img src="./images/icon-spock.svg" alt="spock">
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="selection">
+
+      <div class="select"></div>
+
+      <div class="select"></div>
+
+      <div class="box-result">
+        <p class="result"></p>
+        <button class="btn">PLAY AGAIN</button>
+      </div>
+
+    </div>
+
+    <div class="button">
+      <p>RULES</p>
+    </div>
+
+    <div class="box-rules">
+      <div class="rules">
+        <p class="title">RULES</p>
+        <img src="./images/image-rules-bonus.svg" alt="rules" class="rules-img">
+  
+        <img src="./images/icon-close.svg" alt="close" class="close">
+      </div>
+
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Gabriel Rea</a>.
+  </div>
+  <script src="./main.js" type="module"></script>
+</body>
+</html>

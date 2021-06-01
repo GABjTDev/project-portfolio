@@ -1,0 +1,466 @@
+/* Barlow Semi Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root{
+    --font: 'Barlow Semi Condensed';
+    --darkText: hsl(229, 25%, 31%);
+    --scoreText: hsl(229, 64%, 46%);
+    --headerOutline: hsl(217, 16%, 45%);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-size: 12px;
+}
+
+.container{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.box-score{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid var(--headerOutline);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 120px;
+}
+
+.weapon-list{
+    color: white;
+}
+
+.weapon-list ul{
+    list-style: none;
+}
+
+.weapon-list ul li{
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    line-height: 10px;
+}
+
+.score{
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-text{
+    font-size: 1em;
+    color: var(--scoreText);
+    letter-spacing: 1px;
+}
+
+.score-number{
+    font-size: 2em;
+    color: var(--darkText);
+    font-weight: 700;
+}
+
+.game{
+    width: 80%;
+    max-width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../images/bg-pentagon.svg') no-repeat;
+    background-size: contain;
+    margin-bottom: 130px;
+}
+
+.game.hidden{
+    display: none;
+}
+
+.circle{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.box-white{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 5px rgba(0, 0, 0, .2);
+}
+
+.box-white img{
+    width: 25px;
+}
+
+.selection{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: none;
+    margin-bottom: 50px;
+}
+
+.selection.active{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.selection.active .circle{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+}
+
+.selection.active .circle img{
+    width: 40px;
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.select .circle{
+    margin-bottom: 20px;
+}
+
+.box-result{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result{
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.btn{
+    margin: 0 auto;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--darkText);
+    cursor: pointer;
+}
+
+.win .circle{
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, .05),
+    0 0 0 35px rgba(255, 255, 255, .05),
+    0 0 0 55px rgba(255, 255, 255, .05);
+}
+
+.rock{
+    right: 0;
+    bottom: -25px;
+    background: linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    box-shadow: 0 3px 0 hsl(349, 63%, 43%); 
+}
+
+.paper{
+    right: -25px;
+    top: 25px;
+    background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    box-shadow: 0 3px 0 hsl(230, 66%, 55%); 
+}
+
+.scissors{
+    top: -50px;
+    left: 63px;
+    background: linear-gradient(to top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    box-shadow: 0 3px 0 hsl(39, 90%, 43%); 
+}
+
+.lizard{
+    left: 0;
+    bottom: -25px;
+    background: linear-gradient(to top,hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    box-shadow: 0 3px 0 hsl(261, 53%, 52%); 
+}
+
+.spock{
+    left: -25px;
+    top: 25px;
+    background: linear-gradient(to top, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+    box-shadow: 0 3px 0 hsl(189, 53%, 45%); 
+}
+
+.button{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5px 0;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.rules{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-rules{
+    display: none;
+}
+
+.box-rules.active{
+    display: flex;
+}
+
+.rules.active{
+    display: flex;
+}
+
+.title{
+    font-size: 3em;
+}
+
+.rules .rules-img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.close{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px){
+
+    .container{
+        max-width: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-score{
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    .weapon-list ul li{
+        font-size: 2.5em;
+        line-height: 25px;
+    }
+    
+    .score{
+        width: 120px;
+        height: 100px;
+    }
+
+    .score-text{
+        font-size: 2em;
+    }
+    
+    .score-number{
+        font-size: 3em;
+    }
+
+    .game{
+        max-width: 400px;
+        height: 400px;
+    }
+    
+    .game.hidden{
+        display: none;
+    }
+    
+    .circle{
+        width: 120px;
+        height: 120px;
+    }
+
+    .rock{
+        right: 30px;
+        bottom: -25px;
+    }
+    
+    .paper{
+        right: -40px;
+        top: 80px;
+    }
+    
+    .scissors{
+        top: -60px;
+        left: 140px;
+    }
+    
+    .lizard{
+        left: 30px;
+        bottom: -25px;
+    }
+    
+    .spock{
+        left: -40px;
+        top: 80px;
+    }
+
+    .box-white img{
+        width: 50px;
+    }
+
+    .selection{
+        max-width: 85%;
+    }
+
+    .selection.active{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+
+    .selection.active .circle{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .selection.active .circle img{
+        width: 80px;
+    }
+
+    .select{
+        flex-direction: column-reverse;
+    }
+
+    .select p{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .box-result{
+        order: 1;
+    }
+
+    .select:nth-child(2){
+        order: 2;
+    }
+
+    .win .circle{
+        box-shadow: 0 0 0 45px rgba(255, 255, 255, .02),
+        0 0 0 75px rgba(255, 255, 255, .05),
+        0 0 0 105px rgba(255, 255, 255, .05);
+    }
+
+    .result{
+        font-size: 5em;
+    }
+    
+    .btn{
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    .button{
+        align-self: flex-end;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .box-rules{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .2);
+        left: 0;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rules{
+        width: 500px;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        border-radius: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .rules.active{
+        display: flex;
+    }
+    
+    .title{
+        font-size: 3em;
+    }
+    
+    .rules .rules-img{
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 50px;
+        order: 2;
+        align-self: center;
+        margin: 40px auto;
+    }
+    
+    .close{
+        cursor: pointer;
+        order: 1;
+    }
+
+
+}
