@@ -1,0 +1,207 @@
+/* 'Spartan' */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body.theme-1{
+    /* backgrounds */
+
+    --backgroundMain: hsl(222, 26%, 31%);
+    --backgroundInput: hsl(223, 31%, 20%);
+    --backgroundResult: hsl(224, 36%, 15%);
+
+    /* #### Keys */
+    --btnColor: hsl(225, 21%, 49%);
+    --btnColorShadow: hsl(224, 28%, 35%);
+    --btnResult: hsl(6, 63%, 50%);
+    --btnResultShadow: hsl(6, 70%, 34%);
+    --btnMain: hsl(30, 25%, 89%);
+    --btnMainShadow: hsl(28, 16%, 65%);
+
+    /* #### Text */
+    --KeyColor: hsl(221, 14%, 31%);
+    --resultColor: #fff;
+}
+
+body.theme-2{
+    /* backgrounds */
+
+    --backgroundMain: hsl(0, 0%, 90%);
+    --backgroundInput: hsl(0, 5%, 81%);
+    --backgroundResult: hsl(0, 0%, 93%);
+
+    /* #### Keys */
+    --btnColor: hsl(185, 42%, 37%);
+    --btnColorShadow: hsl(185, 58%, 25%);
+    --btnResult: hsl(25, 98%, 40%);
+    --btnResultShadow: hsl(25, 99%, 27%);
+    --btnMain: hsl(45, 7%, 89%);
+    --btnMainShadow: hsl(35, 11%, 61%);
+
+    /* #### Text */
+    --KeyColor: hsl(60, 10%, 19%);
+    --resultColor: hsl(60, 10%, 19%);
+}
+
+body.theme-3{
+    /* backgrounds */
+
+    --backgroundMain: hsl(268, 75%, 9%);
+    --backgroundInput: hsl(268, 71%, 12%);
+    --backgroundResult: hsl(268, 71%, 12%);
+
+    /* #### Keys */
+    --btnColor: hsl(281, 89%, 26%);
+    --btnColorShadow: hsl(285, 91%, 52%);
+    --btnResult: hsl(176, 100%, 44%);
+    --btnResultShadow: hsl(177, 92%, 70%);
+    --btnMain: hsl(268, 47%, 21%);
+    --btnMainShadow: hsl(290, 70%, 36%);
+
+    /* #### Text */
+    --KeyColor: hsl(52, 100%, 62%);
+    --resultColor: hsl(52, 100%, 62%);
+}
+
+body{
+    background-color: var(--backgroundMain);
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 30px;
+    transition: all .4s ease;
+}
+
+.container{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    color: var(--resultColor);
+    margin-bottom: 30px;
+}
+
+.header h1{
+    font-size: 1em;
+}
+
+.header__theme{
+    display: flex;
+    align-items: flex-end;
+}
+
+.header__theme p{
+    font-size: .4em;
+}
+
+.header__theme > p{
+    margin-right: 20px;
+    margin-bottom: 2px;
+}
+
+.header__theme--choose{
+    width: 70px;
+}
+
+.header__theme--number{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.header__theme--input{
+    background-color: var(--backgroundInput);
+    width: 100%;
+    height: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.header__theme--circle{
+    width: 15px;
+    height: 15px;
+    background-color: var(--btnResult);
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+
+.input{
+    background-color: var(--backgroundResult);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: right;
+    color: var(--resultColor);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.grid{
+    background-color: var(--backgroundInput);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(40px, 1fr));
+    grid-template-rows: repeat(4, 60px);
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.grid__button{
+    width: 100%;
+    background-color: var(--btnMain);
+    box-shadow: 0 3px 0 var(--btnMainShadow);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    color: var(--KeyColor);
+    cursor: pointer;
+}
+
+.grid__button:hover{
+    box-shadow: inset 0 3px 0 var(--btnMainShadow);
+}
+
+.grid__button p{
+    padding: 10px;
+    font-size: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__button--blue{
+    background-color: var(--btnColor);
+    box-shadow: 0 3px 0 var(--btnColorShadow);
+    color: white;
+    font-size: .5em;
+}
+
+.grid__button--blue:hover{
+    box-shadow: inset 0 3px 0 var(--btnColorShadow);
+}
+
+.grid__button--reset{
+    grid-column: span 2;
+}
+
+.grid__button--equality{
+    background-color: var(--btnResult);
+    box-shadow: 0 3px 0 var(--btnResultShadow);
+    color: white;
+    grid-column: span 2;
+}
+
+.grid__button--equality:hover{
+    box-shadow: inset 0 3px 0 var(--btnResultShadow);
+}
